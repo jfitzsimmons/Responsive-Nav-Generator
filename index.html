@@ -21,13 +21,13 @@
   </section>
 
 
+  <div class="controls">
 
+    <p>
+      Section List:
+    </p>
 
-  <div class="table-responsive">
-
-    Section List:<BR />
-
-    <select id="sbox" name="selectbox" size="5">
+    <select id="section-select" name="section-select" size="5" multiple>
       <option>
         home
       </option>
@@ -35,18 +35,14 @@
         section-1
       </option>
     </select>
-    <BR>
-    <button type="button" class="btn btn-default" onclick="DeleteProbs();">Delete Selected Problem</button>
-    <p>To add a problem to the list, type it in the New Problem text field and then click &quot;Add to List&quot;. To remove a problem, click it in the list, then click, &quot;Delete Selected Problem&quot;<P>
-        <strong>New Section</strong>
-        <P>
-          <input type="text" id="ProbAreaFrom">
-          <P>
-            <button type="button" class="btn btn-default" id="ProbListBtn" onclick="ListProbs();">Add to List</button>
-          </p>
+    <button type="button" class="btn btn-default" onclick="DeleteSections();">Delete</button>
+    <p>New Section:</p>
+
+    <input type="text" id="AddSectionInput">
+
+    <button type="button" class="btn btn-default" id="AddSectionBtn" onclick="AddSection();">Add</button>
 
   </div>
-
 
 
   <script src="js/init.js" type="text/javascript"></script>
