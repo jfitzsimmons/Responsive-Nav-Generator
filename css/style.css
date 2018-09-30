@@ -1,0 +1,63 @@
+body,
+html {
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  .icon {display: none;}
+}
+
+.my-link {
+  float: left;
+}
+
+.bars {
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px 16px 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: @white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform:         rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -3px);
+    transform:         rotate(45deg) translate(-4px, -3px);
+}
+
+section {
+  height: 100vh;
+}
+
+h1 {}
+
+.flex {
+  display:         flex;
+  flex-direction:  column;
+  justify-content: center;
+}
+
+.flex.row {
+  flex-direction: row;
+  flex: 1 0 auto;
+}
+
+.flex.wrap {flex-wrap: wrap;}
+
+.flex.grow{
+  flex-grow: 1;
+  overflow:  hidden;
+}
