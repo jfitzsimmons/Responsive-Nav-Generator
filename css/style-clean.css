@@ -1,27 +1,18 @@
 body,
 html {
   margin: 0;
-  color: #212121;
 }
 
 nav {
   width: 100%;
-  border-bottom: 1px solid #e3e3e3;
-}
+  border-bottom: 1px solid #000;
 
-nav a {
-  color: #212121;
-}
-
-nav a:hover {
-  color: #7D7B6A;
 }
 
 nav .icon {display: none;}
 
 .my-link {
   float: left;
-  padding: 10px;
 }
 
 .bars {
@@ -51,30 +42,17 @@ nav .icon {display: none;}
 
 section {
   height: 100vh;
-  border-bottom: 1px solid #e3e3e3;
+  border-bottom: 1px solid #000;
 }
 
 .controls {
   position: fixed;
-  top:     10%;
-  right:   10px;
-  padding: 10px;
-  border: 1px solid #212121;
-  background: #fff;
-  border-radius: 4px;
+  top: 10%;
+  right: 10px;
+  border: 1px solid #000;
 }
 
-input,
-select,
-button {
-  border-radius: 4px;
-  border: 1px solid #212121;
-}
-
-h1 {
-  margin: 10px;
-  color: #212121;
-}
+h1 {}
 
 .flex {
   display:         flex;
@@ -103,7 +81,6 @@ h1 {
   .my-nav .icon {
     float:   right;
     display: block;
-    margin: 10px;
   }
 
   .my-nav.responsive {position: relative;}

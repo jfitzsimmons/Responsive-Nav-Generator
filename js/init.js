@@ -8,45 +8,45 @@ function responsiveNav(x) {
   }
 }
 
-function NavClick() {
+function navClick() {
   $('a[href^="#"]').on('click', function(event) {
     let target = $(this.getAttribute('href'));
     if (target.length) {
       event.preventDefault();
       $('html, body').stop().animate({
-        scrollTop: (target.offset().top) - ($('nav').height() + 43)
+        scrollTop: (target.offset().top)
       }, 1000);
     }
   });
 }
 
-function AddSection() {
+function addSection() {
   var x = document.getElementById("section-select");
-  var txt = document.getElementById("AddSectionInput").value;
+  var txt = document.getElementById("addSectionInput").value;
   var option = document.createElement("option");
   option.text = txt
   x.add(option);
-  $('#AddSectionInput').val('');
-  AddMarkup(txt);
+  $('#addSectionInput').val('');
+  addMarkup(txt);
 }
 
-function DeleteSections() {
+function deleteSections() {
   let selectOps = $('#section-select option:selected');
   selectOps.remove();
-  RemoveMarkup(selectOps);
+  removeMarkup(selectOps);
 }
 
-function AddMarkup(txt) {
+function addMarkup(txt) {
   $(".my-nav").append(`<a class="my-link" href="#${txt}">${txt}</a>`);
   $("section").last().after(`<section id="${txt}" class="flex"><h1>${txt}</h1></section>`);
-  NavClick();
+  navClick();
 }
 
-function RemoveMarkup(selectOps) {
+function removeMarkup(selectOps) {
   $(selectOps).each(function() {
     $(`a[href="#${this.text}"]`).remove();
     $(`#${this.text}`).remove();
   });
 }
 
-NavClick();
+navClick();

@@ -11,6 +11,11 @@
     <div class="my-nav" id="nav">
       <a class="my-link" href="#home">home</a>
       <a class="my-link" href="#section-1">section-1</a>
+      <div class="bars icon" onclick="responsiveNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </div>
   </nav>
   <section id="home" class="flex">
@@ -20,30 +25,17 @@
     <h1>section-1</h1>
   </section>
 
-
   <div class="controls">
-
-    <p>
-      Section List:
-    </p>
-
+    <p>Section List:</p>
     <select id="section-select" name="section-select" size="5" multiple>
-      <option>
-        home
-      </option>
-      <option>
-        section-1
-      </option>
+      <option>home</option>
+      <option>section-1</option>
     </select>
-    <button type="button" class="btn btn-default" onclick="DeleteSections();">Delete</button>
+    <button type="button" class="btn btn-default" onclick="deleteSections();">Delete</button>
     <p>New Section:</p>
-
-    <input type="text" id="AddSectionInput">
-
-    <button type="button" class="btn btn-default" id="AddSectionBtn" onclick="AddSection();">Add</button>
-
+    <input type="text" id="addSectionInput">
+    <button type="button" class="btn btn-default" id="addSectionBtn" onclick="addSection();">Add</button>
   </div>
-
 
   <script src="js/init.js" type="text/javascript"></script>
 </body>
