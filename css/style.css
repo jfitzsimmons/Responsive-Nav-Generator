@@ -61,7 +61,8 @@ section {
   padding: 10px;
   border: 1px solid #212121;
   background: #fff;
-  border-radius: 4px;
+  max-height: 85vh;
+  overflow: auto;
 }
 
 input,

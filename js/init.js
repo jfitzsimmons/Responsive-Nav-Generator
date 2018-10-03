@@ -49,4 +49,9 @@ function removeMarkup(selectOps) {
   });
 }
 
+function createMarkup() {
+  let markup = $("html").prop('outerHTML');
+  $("#markup").text(markup);
+}
+
 navClick();
