@@ -1,25 +1,3 @@
-function responsiveNav(x) {
-  var n = document.getElementById("nav");
-  x.classList.toggle("change");
-  if (n.className === "my-nav") {
-    n.className += " responsive";
-  } else {
-    n.className = "my-nav";
-  }
-}
-
-function navClick() {
-  $('a[href^="#"]').on('click', function(event) {
-    let target = $(this.getAttribute('href'));
-    if (target.length) {
-      event.preventDefault();
-      $('html, body').stop().animate({
-        scrollTop: (target.offset().top)
-      }, 1000);
-    }
-  });
-}
-
 function addSection() {
   var x = document.getElementById("section-select");
   var txt = document.getElementById("addSectionInput").value;
@@ -37,8 +15,8 @@ function deleteSections() {
 }
 
 function addMarkup(txt) {
-  $(".my-nav").append(`<a class="my-link" href="#${txt}">${txt}</a>`);
-  $("section").last().after(`<section id="${txt}" class="flex"><h1>${txt}</h1></section>`);
+  $(".bars").before(`<a class="my-link" href="#${txt}">${txt}</a>\n      `);
+  $("section").last().after(`\n  <section id="${txt}" class="flex">\n    <h1>${txt}</h1>\n  </section>\n`);
   navClick();
 }
 
@@ -50,8 +28,10 @@ function removeMarkup(selectOps) {
 }
 
 function createMarkup() {
-  let markup = $("html").prop('outerHTML');
-  $("#markup").text(markup);
+  let markup = $("html").clone();
+  markup.find(".controls").remove();
+  markup.find('script[src="js/init.js"]').remove();
+  markup.find("link").attr("href", "css/style.css");
+  let markupnew = $(markup).prop('innerHTML');
+  $("#markup").text(markupnew);
 }
-
-navClick();
